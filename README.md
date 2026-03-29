@@ -137,3 +137,29 @@ pnpm build      # Compile TypeScript
 pnpm start      # Run compiled server
 ```
 
+# ⚛️ Frontend Routing
+
+The frontend uses **react-router-dom** for client-side routing.
+
+---
+
+## 📦 Example Setup
+
+```ts id="7votkq"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AuthPage from "./pages/auth/AuthPage";
+import HomePage from "./pages/HomePage";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/auth" element={<AuthPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+```
